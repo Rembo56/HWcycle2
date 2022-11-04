@@ -44,19 +44,63 @@ public class Main {
         int bornYear = y/1000 * 17;
         int deadYear = y/1000 * 8;
         int incPeople = bornYear-deadYear;
-        int r = 0;
-        while (r<10){
+        int r = 1;
         y=incPeople+y;
-        r=r+1;
-
         System.out.println("Год " + r + " численность населения составляет " + y);
+
+        while (r<=9){
+            r=r+1;
+            y=incPeople+y;
+            bornYear = y/1000 * 17;
+            deadYear = y/1000 * 8;
+            incPeople = bornYear-deadYear;
+
+
+            System.out.println("Год " + r + " численность населения составляет " + y);
 
         }
         System.out.println();
 
-        // Задача 4  // Задача 5  // Задача 6
+        // Задача 4
 
         int save=15000;
+        int m =1;
+        save=save+save*7/100;
+        System.out.println("Месяц " + m + " сумма накоплений равна " + save + " рублей");
+
+        while (save<=12000000){
+            save=save+save*7/100;
+            m=m+1;
+            System.out.println("Месяц " + m + " сумма накоплений равна " + save + " рублей");
+        }
+
+
+        System.out.println();
+
+
+        // Задача 5
+
+         save=15000;
+         m =1;
+        save=save+save*7/100;
+        //System.out.println("Месяц " + m + " сумма накоплений равна " + save + " рублей");
+
+        while (save<=12000000) {
+            save = save + save * 7 / 100;
+            m=m+1;
+            if (m % 6 == 0) {
+                System.out.println("Месяц " + m + " сумма накоплений равна " + save + " рублей");
+            }
+
+        }
+
+        System.out.println();
+
+
+
+        // Задача 6
+
+         save=15000;
 
         for(int p = 1;p <=108;p ++) {
         save=save+save*7/100;
@@ -69,10 +113,12 @@ public class Main {
         // Задача 7
 
 
-        int day = 6;
-        while (day<=31){
+        int day = 0;
+        int friday =5;
+
+        while (day<31){
         day++;
-        if(day%7==0){
+        if((day-friday)%7==0){
         System.out.println("Сегодня пятницa " + day + "е число,необходимо предоставить отчёт");
         }
         }
@@ -98,5 +144,6 @@ public class Main {
         for (int v =1;v<=10;v++){
         System.out.println("2*" + v +"=" +2 * v);
         }
-        }
+
+    }
         }
