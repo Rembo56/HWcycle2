@@ -114,11 +114,11 @@ public class Main {
 
 
         int day = 0;
-        int friday =5;
+        int firstFriday =5;
 
         while (day<31){
         day++;
-        if((day-friday)%7==0){
+        if((day-firstFriday)%7==0){
         System.out.println("Сегодня пятницa " + day + "е число,необходимо предоставить отчёт");
         }
         }
