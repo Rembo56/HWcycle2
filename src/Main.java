@@ -130,9 +130,10 @@ public class Main {
 
     // Задача 9
 
-        for(int v = 1;v<=10;v++){
-        System.out.println("2*" + v + "=" + 2 * v);
-    }
+        for(int v = 1;v<=10;v++) {
+            System.out.println("2*" + v + "=" + 2 * v);
+        }
+
 }
 }
 
